@@ -1,3 +1,3 @@
 // console.log("main.js")
 
-getAllFlowers().then(parsedResponse => console.table(parsedResponse))
+getAllFlowers().then(parsedResponse => buildHtmlAllFlowers(parsedResponse))
