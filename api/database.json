@@ -1,3 +1,31 @@
 {
-  "flowers": []
+  "flowers": [
+    {
+      "id": 1,
+      "species": "Chrysanthemum",
+      "quantity": 10,
+      "color": "Pink",
+      "price": 6,
+      "seasonal": false,
+      "occasion": "Weddings"
+    },
+    {
+      "id": 2,
+      "species": "Tulip",
+      "quantity": 12,
+      "color": "Yellow",
+      "price": 11.95,
+      "seasonal": true,
+      "occasion": "Anniversaries"
+    },
+    {
+      "id": 3,
+      "species": "Rose",
+      "quantity": 24,
+      "color": "Violet",
+      "price": 49.95,
+      "seasonal": false,
+      "occasion": "Valentines"
+    }
+  ]
 }
