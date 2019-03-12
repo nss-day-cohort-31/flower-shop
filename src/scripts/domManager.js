@@ -1,6 +1,13 @@
 // console.log("domManager.js")
 
 const displayContainer = document.querySelector("#display-container");
+const formSection = document.createElement("section");
+formSection.id = "form-container";
+displayContainer.appendChild(formSection);
+
+const allFlowersSection = document.createElement("section");
+allFlowersSection.id = "all-flowers";
+displayContainer.appendChild(allFlowersSection);
 
 const buildElementWithText = (elementType, elementTextContent) => {
   let htmlElement = document.createElement(elementType);
@@ -27,43 +34,52 @@ const buildHtmlForFlower = flowerObject => {
   return flowerSection;
 };
 
-const appendAllFlowersToDom = taco => {
+const appendAllFlowersToDom = flowersArray => {
   let flowersDocFragment = document.createDocumentFragment();
 
-  taco.forEach(flower => {
+  flowersArray.forEach(flower => {
     flowersDocFragment.appendChild(buildHtmlForFlower(flower));
     // console.log(flowersDocFragment);
   });
 
-  displayContainer.appendChild(flowersDocFragment);
+  while (allFlowersSection.firstChild) {
+    allFlowersSection.removeChild(allFlowersSection.firstChild);
+  }
+  // debugger
+
+  allFlowersSection.appendChild(flowersDocFragment);
 };
 
 const buildAndAppendForm = () => {
-  let formSection = document.createElement("section");
-  formSection.id = "form-container";
+  let formDocumentFragment = document.createDocumentFragment();
 
-  formSection.appendChild(buildElementWithText("label", "Species: "));
-  formSection.appendChild(buildInputElement("text", "flower-species"));
+  formDocumentFragment.appendChild(buildElementWithText("label", "Species: "));
+  formDocumentFragment.appendChild(buildInputElement("text", "flower-species"));
 
-  formSection.appendChild(buildElementWithText("label", "Occasion: "));
-  formSection.appendChild(buildInputElement("text", "flower-occasion"));
+  formDocumentFragment.appendChild(buildElementWithText("label", "Occasion: "));
+  formDocumentFragment.appendChild(
+    buildInputElement("text", "flower-occasion")
+  );
 
-  formSection.appendChild(buildElementWithText("label", "Price: "));
-  formSection.appendChild(buildInputElement("text", "flower-price"));
+  formDocumentFragment.appendChild(buildElementWithText("label", "Price: "));
+  formDocumentFragment.appendChild(buildInputElement("text", "flower-price"));
 
-  formSection.appendChild(buildElementWithText("label", "Quantity: "));
-  formSection.appendChild(buildInputElement("text", "flower-quantity"));
+  formDocumentFragment.appendChild(buildElementWithText("label", "Quantity: "));
+  formDocumentFragment.appendChild(
+    buildInputElement("text", "flower-quantity")
+  );
 
-  formSection.appendChild(buildElementWithText("label", "Color: "));
-  formSection.appendChild(buildInputElement("text", "flower-color"));
+  formDocumentFragment.appendChild(buildElementWithText("label", "Color: "));
+  formDocumentFragment.appendChild(buildInputElement("text", "flower-color"));
 
   let radioButtonsDiv = document.createElement("div");
 
-  formSection.appendChild(buildElementWithText("label", "Seasonal: "));
+  formDocumentFragment.appendChild(buildElementWithText("label", "Seasonal: "));
   let seasonalTrueRadioBtn = document.createElement("input");
   seasonalTrueRadioBtn.type = "radio";
   seasonalTrueRadioBtn.name = "flower-seasonal";
   seasonalTrueRadioBtn.value = true;
+  seasonalTrueRadioBtn.checked = true;
   radioButtonsDiv.appendChild(seasonalTrueRadioBtn);
 
   radioButtonsDiv.appendChild(buildElementWithText("span", "In season"));
@@ -76,11 +92,13 @@ const buildAndAppendForm = () => {
 
   radioButtonsDiv.appendChild(buildElementWithText("span", "Not available"));
 
-  formSection.appendChild(radioButtonsDiv);
+  formDocumentFragment.appendChild(radioButtonsDiv);
 
-  formSection.appendChild(buildElementWithText("button", "Add Flower"))
+  let addFlowerButton = buildElementWithText("button", "Add Flower");
+  addFlowerButton.addEventListener("click", handleAddFlower);
+  formDocumentFragment.appendChild(addFlowerButton);
 
-  console.log(formSection);
+  console.log(formDocumentFragment);
 
-  displayContainer.appendChild(formSection);
+  formSection.appendChild(formDocumentFragment);
 };
