@@ -26,6 +26,150 @@
       "price": 49.95,
       "seasonal": false,
       "occasion": "Valentines"
+    },
+    {
+      "species": "Germanium",
+      "quantity": "100",
+      "color": "Red",
+      "price": "100",
+      "seasonal": "true",
+      "occasion": "Mother's Day",
+      "id": 4
+    },
+    {
+      "species": "Snap Dragon",
+      "quantity": "200",
+      "color": "Red",
+      "price": "200",
+      "seasonal": "true",
+      "occasion": "Father's Day",
+      "id": 5
+    },
+    {
+      "species": "Jasmine",
+      "quantity": "140",
+      "color": "White",
+      "price": "150",
+      "seasonal": "true",
+      "occasion": "Wedding",
+      "id": 6
+    },
+    {
+      "species": "Hydrangea",
+      "quantity": "111",
+      "color": "Blue",
+      "price": "55.55",
+      "seasonal": "false",
+      "occasion": "Birthday",
+      "id": 7
+    },
+    {
+      "species": "Hydrangea 2",
+      "quantity": "111",
+      "color": "Blue",
+      "price": "55.55",
+      "seasonal": "true",
+      "occasion": "Birthday",
+      "id": 8
+    },
+    {
+      "species": "Crane's Bill",
+      "quantity": "500",
+      "color": "Pink",
+      "price": "12.99",
+      "seasonal": "true",
+      "occasion": "All occasions",
+      "id": 9
+    },
+    {
+      "species": "eqw",
+      "quantity": 234,
+      "color": "asdas",
+      "price": 123.54,
+      "seasonal": "true",
+      "occasion": "qwewq",
+      "id": 10
+    },
+    {
+      "species": "adasdsa",
+      "quantity": 1000,
+      "color": "green",
+      "price": 67.99,
+      "seasonal": false,
+      "occasion": "sdfsa",
+      "id": 11
+    },
+    {
+      "species": "asdasdas",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": true,
+      "occasion": "",
+      "id": 12
+    },
+    {
+      "species": "",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": true,
+      "occasion": "",
+      "id": 13
+    },
+    {
+      "species": "asdasd",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": false,
+      "occasion": "",
+      "id": 14
+    },
+    {
+      "species": "",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": true,
+      "occasion": "",
+      "id": 15
+    },
+    {
+      "species": "",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": false,
+      "occasion": "",
+      "id": 16
+    },
+    {
+      "species": "",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": false,
+      "occasion": "",
+      "id": 17
+    },
+    {
+      "species": "",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": false,
+      "occasion": "",
+      "id": 18
+    },
+    {
+      "species": "",
+      "quantity": 0,
+      "color": "",
+      "price": 0,
+      "seasonal": true,
+      "occasion": "",
+      "id": 19
     }
   ]
 }
